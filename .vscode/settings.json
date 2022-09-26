@@ -1,0 +1,5 @@
+{
+    "remoteHub.logLevel": "debug",
+    // "python.wasm.runtime": "https://github.com/dbaeumer/python-3.11.0rc",
+
+}
