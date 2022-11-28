@@ -1,12 +1,9 @@
-import cmd
 import pdb
 
-debugIn = open('/$debug/input', 'r', -1, 'utf-8')
-debugOut = open('/$debug/output', 'w', -1, 'utf-8')
+dbgin = open('/$debug/input', 'r', -1, 'utf-8')
+dbgout = open('/$debug/output', 'w', -1, 'utf-8')
 
-cmdline = cmd.Cmd(None, debugIn, debugOut)
-cmdline.use_rawinput = False
-
-debugger = pdb.Pdb(cmdline)
+debugger = pdb.Pdb(stdin=dbgin, stdout=dbgout)
+debugger.prompt = ''
 
 debugger.run('import app')
